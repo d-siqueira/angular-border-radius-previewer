@@ -1,0 +1,137 @@
+$green: #267452;
+$yellow: #f1ef54;
+$white: #f6f6f6;
+
+h1 {
+  text-align: center;
+  color: $white;
+  font-size: 2.5rem;
+}
+
+.box {
+  $box-margin: 5px;
+  $box-width: 300px;
+  $box-height: 200px;
+
+  background-color: $green;
+  width: $box-width;
+  height: $box-height;
+  border-style: solid;
+  border-width: $box-margin;
+  border-color: $yellow;
+  position: relative;
+
+  margin: 5rem;
+
+  .input-border-radius {
+    $input-height: 20px;
+    $input-width: 60px;
+
+    height: $input-height;
+    width: $input-width;
+    position: absolute;
+    border: none;
+    border-radius: 2px;
+    outline: 0;
+    text-align: center;
+
+    input[type="checkbox"] {
+      visibility: hidden;
+    }
+
+    fa-icon {
+      color: $white;
+      cursor: pointer;
+    }
+
+    $input-distance: 2px;
+    $input-distance-height: -$box-margin -$input-height - $input-distance;
+    $input-distance-width: -$box-margin -$input-width - $input-distance;
+
+    &.top-left{
+      &-checkbox {
+        top: $input-distance-height;
+        left: $input-distance-width;
+      }
+
+      &-horizontal {
+        top: $input-distance;
+        left: $input-distance-width;
+      }
+
+      &-vertical {
+        top: $input-distance-height;
+        left: - $box-margin;
+      }
+    }
+
+    &.top-right{
+      &-checkbox {
+        top: $input-distance-height;
+        right: $input-distance-width;
+      }
+
+      &-horizontal {
+        top: $input-distance;
+        right: $input-distance-width;
+      }
+
+      &-vertical {
+        top: $input-distance-height;
+        right: -$box-margin;
+      }
+    }
+
+    &.bottom-left{
+      &-checkbox {
+        bottom: $input-distance-height;
+        left: $input-distance-width;
+      }
+
+      &-horizontal {
+        bottom: $input-distance;
+        left: $input-distance-width;
+      }
+
+      &-vertical {
+        bottom: $input-distance-height;
+        left: -$box-margin;
+      }
+    }
+
+    &.bottom-right{
+      &-checkbox {
+        bottom: $input-distance-height;
+        right: $input-distance-width;
+      }
+
+      &-horizontal {
+        bottom: $input-distance;
+        right: $input-distance-width;
+      }
+
+      &-vertical {
+        bottom: $input-distance-height;
+        right: -$box-margin;
+      }
+    }
+  }
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 2rem;
+  background-color: $green;
+  margin-top: 2rem;
+}
